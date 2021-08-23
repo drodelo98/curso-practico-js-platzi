@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Primer taller curso practico JS</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Calcula el área y perimetro de un cuadrado</h2>
+            <form action="">
+                <label for="inputCuadrado">Ingresa cuánto mide cada lado del cuadrado</label>
+                <input type="number" id="inputCuadrado">
+                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>
+                <button type="button" onclick="calcularAreaCuadrado()">Calcular área</button>
+            </form>
+        </section>
+        <section>
+            <h2>Calcula el área y perimetro de un Triangulo</h2>
+            <form action="">
+                <label for="baseTriangulo">Ingresa la base</label>
+                <input type="number" id="baseTriangulo">
+                <label for="alturaTriangulo">Ingresa la altura</label>
+                <input type="number" id="alturaTriangulo">
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
+            </form>
+        </section>
+    </main>
+    <script src="./figuras.js"></script>
+</body>
+</html>
