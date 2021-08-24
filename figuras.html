@@ -13,24 +13,22 @@
 
     <main>
         <section>
-            <h2>Calcula el área y perimetro de un cuadrado</h2>
+            <h2>Calcula el precio con descuento</h2>
             <form action="">
-                <label for="inputCuadrado">Ingresa cuánto mide cada lado del cuadrado</label>
-                <input type="number" id="inputCuadrado">
-                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>
-                <button type="button" onclick="calcularAreaCuadrado()">Calcular área</button>
+              <label for="price">Ingresa el precio del producto</label>
+              <input type="number" id="price" required>
+              <select name="cupon" id="cupon" required>
+                  <option value="cupon1">coupon1</option>
+                  <option value="cupon2">coupon2</option>
+                  <option value="cupon3">coupon3</option>
+                  <option value="cupon4">coupon4</option>
+                  <option value="cupon5">coupon5</option> 
+              </select>
+              <button type="button" onclick="aplicarCupon()">Enviar</button>
             </form>
         </section>
-        <section>
-            <h2>Calcula el área y perimetro de un Triangulo</h2>
-            <form action="">
-                <label for="baseTriangulo">Ingresa la base</label>
-                <input type="number" id="baseTriangulo">
-                <label for="alturaTriangulo">Ingresa la altura</label>
-                <input type="number" id="alturaTriangulo">
-                <button type="button" onclick="calcularAreaTriangulo()">Calcular área</button>
-            </form>
-        </section>
+
+        <p id="resultPrice"></p>
     </main>
     <script src="./figuras.js"></script>
 </body>

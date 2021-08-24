@@ -1,42 +1,27 @@
 
-function perimetroCuadrado(lado){
-    return lado * 4;
+let listaCupones = [
+    {nombreCupon: "cupon1", descuento: 0.1 , descuentoP: "10%"},
+    {nombreCupon: "cupon2", descuento: 0.2 , descuentoP: "20%"},
+    {nombreCupon: "cupon3", descuento: 0.3 , descuentoP: "30%"},
+    {nombreCupon: "cupon4", descuento: 0.4 , descuentoP: "40%"},
+    {nombreCupon: "cupon5", descuento: 0.5 , descuentoP: "50%"},
+]
+
+function aplicarCupon() {
+    const inputP = document.getElementById("price");
+    const valueP = inputP.value;
+
+    const inputC = document.getElementById("cupon");
+    const valueC = inputC.value;
+
+    for(let coupon of listaCupones){
+        if (coupon.nombreCupon == valueC){
+            const descuento = (1-coupon.descuento);
+            const precioFinal = valueP*descuento;
+            const ahorro = precioFinal - valueP;
+            
+            const resultPrice = document.getElementById("resultPrice");
+            resultPrice.innerText = ("Se aplicó el cupón " + coupon.nombreCupon + "con un descuento de " + coupon.descuentoP + " ahorras " + ahorro + " y terminas pagando " + precioFinal);
+        }
 }
-
-function areaCuadrado(lado){
-    return lado * lado;
-}
-
-function areaTriangulo(base,altura){
-    return base * altura;
-}
-
-
-function calcularPerimetroCuadrado() {
-    const input = document.getElementById("inputCuadrado");
-    const value = input.value;
-    
-    const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
-}
-
-
-function calcularAreaCuadrado() {
-    const input = document.getElementById("inputCuadrado");
-    const value = input.value;
-    
-    const area = areaCuadrado(value);
-    alert(area);
-}
-
-function calcularAreaTriangulo(){
-    const inputb = document.getElementById("baseTriangulo");
-    const valueb = inputb.value;
-
-    const inputa = document.getElementById("alturaTriangulo");
-    const valuea = inputa.value;
-
-    const area = areaTriangulo(valueb,valuea);
-
-    alert(area/2);
 }
